@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Un álbum para ti",
+    "intro": "Cada foto guarda una historia.\nToca una para revelarla.",
+    "finalLetter": "Aquí va tu carta final. Se desbloquea cuando hayas revelado todas las fotos.\n\nEscríbela con calma, como si la estuvieras diciendo en voz baja.",
+    "signature": "Tu nombre"
+  },
+  "sections": [
+    {
+      "id": "cinemateca",
+      "title": "Cinemateca",
+      "subtitle": "la primera función",
+      "accent": "#b89a5a",
+      "cover": "cinemateca/01.webp",
+      "photos": [
+        {
+          "src": "cinemateca/01.webp",
+          "alt": "Atardecer de tonos cálidos sobre unas colinas",
+          "text": "Llegamos tarde, como siempre, y aun así encontramos los mejores asientos. No recuerdo el final de la película; recuerdo que te reíste bajito en la escena equivocada y me gustó más que cualquier guion.",
+          "caption": "la fila de atrás"
+        },
+        {
+          "src": "cinemateca/02.webp",
+          "alt": "Cielo rosado y colinas moradas en horizontal",
+          "text": "Había un cartel enorme en la entrada y dijiste que esa era la película que íbamos a ver, aunque no hubiera nadie más en la sala.\n\nAhora, cada vez que se apagan las luces, me acuerdo.",
+          "caption": "antes de que empiece"
+        },
+        {
+          "src": "cinemateca/03.webp",
+          "alt": "Luz dorada entre colinas oscuras",
+          "text": "Salimos con el cielo naranja y sin ganas de irnos a casa. Caminamos las cuadras más largas del mundo hablando de todo menos de la película.",
+          "caption": "luz de las siete"
+        }
+      ]
+    },
+    {
+      "id": "antenna",
+      "title": "Antenna",
+      "subtitle": "ruido de fondo",
+      "accent": "#8B9CA8",
+      "cover": "antenna/01.webp",
+      "photos": [
+        {
+          "src": "antenna/01.webp",
+          "alt": "Cielo azul grisáceo sobre cerros verdes",
+          "text": "Nunca supe bien qué captaba esa antena, pero desde ese día cada vez que veo una pienso en ti: en todo lo que se dice sin decirse, en las señales que solo tú y yo entendemos.",
+          "caption": "señal"
+        },
+        {
+          "src": "antenna/02.webp",
+          "alt": "Paisaje de montañas en tonos azules",
+          "text": "Subimos hasta donde ya no había señal en el teléfono. Fue la mejor parte del viaje: por fin hablábamos sin interrupciones.",
+          "caption": "sin cobertura"
+        },
+        {
+          "src": "antenna/03.webp",
+          "alt": "Cerros oscuros bajo una luna clara",
+          "text": "Esa noche la luna estaba tan clara que casi no hacían falta las linternas. Me quedé callado un rato largo, y no era incomodidad: era estar bien.",
+          "caption": "luna llena"
+        }
+      ]
+    }
+  ]
+}

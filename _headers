@@ -1,0 +1,4 @@
+# Used by Netlify (ignored elsewhere): keep the site out of search engines and don't leak the URL as a referrer.
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Referrer-Policy: no-referrer
