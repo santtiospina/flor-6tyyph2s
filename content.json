@@ -15,21 +15,9 @@
       "photos": [
         {
           "src": "cinemateca/01.webp",
-          "alt": "Atardecer de tonos cálidos sobre unas colinas",
+          "alt": "Cinemateca, foto 1",
           "text": "Gané en color hunting.",
           "caption": "la primera foto"
-        },
-        {
-          "src": "cinemateca/02.webp",
-          "alt": "Cielo rosado y colinas moradas en horizontal",
-          "text": "A",
-          "caption": "no alcanzare a terminar esto a tiempo"
-        },
-        {
-          "src": "cinemateca/03.webp",
-          "alt": "Luz dorada entre colinas oscuras",
-          "text": "B",
-          "caption": "malditasea"
         }
       ]
     },
@@ -42,19 +30,19 @@
       "photos": [
         {
           "src": "antenna/01.webp",
-          "alt": "Cielo azul grisáceo sobre cerros verdes",
+          "alt": "Antenna, foto 1",
           "text": "Nunca supe bien qué captaba esa antena, pero desde ese día cada vez que veo una pienso en ti: en todo lo que se dice sin decirse, en las señales que solo tú y yo entendemos.",
           "caption": "teamo"
         },
         {
           "src": "antenna/02.webp",
-          "alt": "Paisaje de montañas en tonos azules",
+          "alt": "Antenna, foto 2",
           "text": "Subimos hasta donde ya no había señal en el teléfono. Fue la mejor parte del viaje: por fin hablábamos sin interrupciones.",
           "caption": "teamox2"
         },
         {
           "src": "antenna/03.webp",
-          "alt": "Cerros oscuros bajo una luna clara",
+          "alt": "Antenna, foto 3",
           "text": "Esa noche la luna estaba tan clara que casi no hacían falta las linternas. Me quedé callado un rato largo, y no era incomodidad: era estar bien.",
           "caption": "teamox3"
         }

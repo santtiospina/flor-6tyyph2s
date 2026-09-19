@@ -177,7 +177,7 @@ body:not(.is-loading) .veil { opacity: 0; visibility: hidden; pointer-events: no
   transition: filter 1.2s var(--ease), opacity .9s;
   opacity: 0;
 }
-.card.is-loaded .card-photo img { opacity: 1; }
+.card.is-loaded .card-photo img { opacity: calc(.45 + .55 * var(--p, 0)); }
 .card-photo::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06), inset 0 0 20px rgba(80, 60, 40, .1); pointer-events: none; }
 .card-title { display: block; flex: 1; margin-top: 10px; font: 500 clamp(1.3rem, 5.4vw, 1.55rem)/1.05 var(--f-display); color: var(--ink); text-wrap: balance; }
 .card-meta { display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px; color: var(--ink-soft); }
@@ -219,6 +219,8 @@ body:not(.is-loading) .veil { opacity: 0; visibility: hidden; pointer-events: no
 
 /* unread: pale, blurred, desaturated — the undeveloped print */
 .ph-base { filter: blur(6px) saturate(.16) sepia(.16) brightness(1.13) contrast(.84); transform: scale(1.12); }
+/* dissolve into the paper: makes dark photos look like a pale, undeveloped wash instead of a dark smudge */
+.pola.is-loaded .photo img.ph-base { opacity: .42; }
 .ph-top { --mx: 50%; --my: 50%; }
 .is-unread .ph-top, .is-developing .ph-top {
   /* three overlapping blooms grow from the tap point with a soft, fixed-width edge: an irregular, spreading wash.

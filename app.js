@@ -63,6 +63,8 @@ let cameFromMenu = false;
 let menuScroll = 0;
 
 const isRead = (src) => DEV || read.has(src);
+// photos/manifest.json carries a short hash per photo: a swapped-in photo gets a new URL, so it is never served stale from cache
+const photoUrl = (src) => `photos/${src}${sizes[src]?.[2] ? `?v=${sizes[src][2]}` : ''}`;
 const readCount = (s) => s.photos.filter((p) => isRead(p.src)).length;
 
 // ------------------------------------------------------------------ boot
@@ -75,7 +77,7 @@ async function init() {
         if (!r.ok) throw new Error(`content.json: ${r.status}`);
         return r.json();
       }),
-      fetch('photos/manifest.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+      fetch('photos/manifest.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
     ]);
     content = c;
     sizes = m;
@@ -183,7 +185,7 @@ function card(s, i) {
   const n = s.photos.length;
   const got = readCount(s);
   const cover = s.cover || s.photos[0]?.src;
-  const img = h('img', { src: `photos/${cover}`, alt: '', loading: i < 6 ? 'eager' : 'lazy', decoding: 'async', draggable: 'false' });
+  const img = h('img', { src: photoUrl(cover), alt: '', loading: i < 6 ? 'eager' : 'lazy', decoding: 'async', draggable: 'false' });
   const a = h('a', {
       class: 'card' + (n && got === n ? ' is-done' : ''),
       href: `#${encodeURIComponent(s.id)}`,
@@ -233,7 +235,7 @@ function polaroid(p, i) {
   const ar = clamp(w / hh, 0.55, 1.8);
   const done = isRead(p.src);
   const loading = i < 4 ? 'eager' : 'lazy';
-  const url = `photos/${p.src}`;
+  const url = photoUrl(p.src);
   const top = h('img', { class: 'ph-top', src: url, alt: p.alt ?? '', loading, decoding: 'async', draggable: 'false' });
   const base = done ? null : h('img', { class: 'ph-base', src: url, alt: '', 'aria-hidden': 'true', loading, decoding: 'async', draggable: 'false' });
   const btn = h('button', {
